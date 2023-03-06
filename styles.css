@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
+  animation-name: fade-in;
+  animation-duration: 2s;
+  position: relative;
 }
 
 .header-container {
@@ -32,12 +35,30 @@
   flex-wrap: nowrap;
 }
 
+.projects {
+  margin: 1em;
+}
+
+.cards {
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgb(122, 122, 122);
+  border: 1px solid black;
+  margin: 10px 0;
+}
+
 #card1-img {
-  width: 95%;
+  width: 100%;
+  border-radius: 5px;
 }
 
 #card1-img img {
   width: 100%;
+  border-radius: 10px;
+}
+
+#card2-img img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 ul {
@@ -51,4 +72,15 @@ a {
   margin: 5px;
   color: black;
   font-weight: 300;
+}
+
+@keyframes fade-in {
+  from {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
